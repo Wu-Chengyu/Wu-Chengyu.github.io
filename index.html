@@ -63,11 +63,30 @@
         h1 {
             color: var(--primary);
             margin-bottom: 0.5rem;
+            margin-top: 1rem; /* 新增：调整标题与照片间距 */
         }
         .subtitle {
             color: var(--accent);
             font-style: italic;
             margin-bottom: 1.5rem;
+        }
+        .profile-photo-container {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--accent);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .profile-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease; /* 悬停动画 */
+        }
+        .profile-photo:hover {
+            transform: scale(1.05); /* 悬停放大效果 */
         }
         /* 响应式设计 */
         @media (max-width: 768px) {
